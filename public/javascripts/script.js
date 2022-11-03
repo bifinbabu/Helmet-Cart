@@ -130,48 +130,16 @@ $(function () {
 });
 
 //function for search bar of user
-var buttonUp = () => {
-    const input = document.querySelector(".searchbox-input");
-    const cards = document.getElementsByClassName("card");
-    let filter = input.value
-    for (let i = 0; i < cards.length; i++) {
-        let title = cards[i].querySelector(".card-body");
-        if (title.innerText.indexOf(filter) > -1) {
-            cards[i].classList.remove("d-none")
-        } else {
-            cards[i].classList.add("d-none")
-        }
-    }
-}
-
-// $(document).ready(function(){
-//     $('#searchbox-input').on('keyup',function(){
-//         var value = $(this).val().toLowerCase();
-//         $('#card div').filter(function(){
-//             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1 );
-//         })
-//     })
-// })
-
-// $('.searchbox-input').change( function () {
-//     $('.card').show();
-//     var filter = $(this).val(); // get the value of the input, which we filter on
-//     $('.container').find(".card-title:not(:contains(" + filter + "))").parent().css('display','none');
-// });
-
-
-// function myFunction() {
-//     var input, filter, cards, cardContainer, title, i;
-//     input = document.getElementById("searchbox-input");
-//     filter = input.value.toUpperCase();
-//     cardContainer = document.getElementById("productCards");
-//     cards = cardContainer.getElementsByClassName("card");
-//     for (i = 0; i < cards.length; i++) {
-//       title = cards[i].querySelector(".card-body");
-//       if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-//         cards[i].style.display = "";
-//       } else {
-//         cards[i].style.display = "none";
-//       }
+// var buttonUp = () => {
+//     const input = document.querySelector(".searchbox-input");
+//     const cards = document.getElementsByClassName("card");
+//     let filter = input.value
+//     for (let i = 0; i < cards.length; i++) {
+//         let title = cards[i].querySelector(".card-body");
+//         if (title.innerText.indexOf(filter) > -1) {
+//             cards[i].classList.remove("d-none")
+//         } else {
+//             cards[i].classList.add("d-none")
+//         }
 //     }
-//   }
+// }

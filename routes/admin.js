@@ -14,6 +14,7 @@ router.get('/', function (req, res, next) {
 
 });
 
+//Add product for admin 
 router.get('/add-product', function (req, res) {
   res.render('admin/add-product')
 })

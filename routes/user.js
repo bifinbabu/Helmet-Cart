@@ -100,10 +100,13 @@ router.post('/remove-from-cart/:id', (req,res) =>{
     res.json({status:true})
   })
 })
+
 router.get('/place-order',verifyLogin, async (req,res) =>{
   let total = await userHelpers.getTotalAmount(req.session.user._id)
   res.render('user/place-order',{total,user:req.session.user})
 })
+
+//Order placing with Razorpay payment gateway integrated
 router.post('/place-order',async (req,res) =>{
   let products = await userHelpers.getCartProductList(req.body.userId)
   let totalPrice = await userHelpers.getTotalAmount(req.body.userId)
@@ -129,6 +132,8 @@ router.get('/view-order-products/:id', async (req,res) =>{
   let products = await userHelpers.getOrderProducts(req.params.id)
   res.render('user/view-order-products', {user: req.session.user, products})
 })
+
+//Verification of payment using SHA256 algorithm 
 router.post('/verify-payment', (req,res) =>{
   console.log(req.body);
   userHelpers.verifyPayment(req.body).then(() =>{

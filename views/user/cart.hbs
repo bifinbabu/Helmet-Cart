@@ -18,7 +18,7 @@
                     
                     <td><img style="width: 70px; height: 70px;" src="/product-images/{{this.product._id}}.jpg" alt=""></td>
                     <td>{{this.product.Name}}</td>
-                    <td>Rs.{{this.product.Price}}/-</td>
+                    <td>₹ {{this.product.Price}}/-</td>
                     <td>
                         <button class="cart-item-count mr-3 btn btn-primary" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}', -1)">-</button>
                         <span id="{{this.product._id}}">{{this.quantity}}</span>
@@ -36,7 +36,7 @@
         </table>
         <hr>
         <div class="float-right pr-5">
-        <h3 class="float-left mr-5">Total Rs.<span id="total">{{totalValue}}</span></h3>
+        <h3 class="float-left mr-5">Total ₹ <span id="total">{{totalValue}}</span></h3>
         <a href="/place-order" class="float-right mt-3 btn btn-success" style="width: 100%;"> <b>Place Order</b> </a>
         </div>
     </div>
