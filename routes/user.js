@@ -49,8 +49,8 @@ router.post('/signup',(req,res) =>{
     console.log(response);
     
     req.session.user = response.user
-    req.session.userLoggedIn = true
-    res.redirect('/')
+    // req.session.userLoggedIn = true
+    res.redirect('/login')
   })
 })
 router.post('/login',(req,res) =>{
